@@ -1,0 +1,11 @@
+version: '3'
+services: 
+    app:
+        image: golang:1.14.2-alpine3.11
+        container_name: golang_container
+        tty: true
+        ports: 
+            - 8080:8080
+        working_dir: /app
+        volumes: 
+            - ./:/app
